@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            .checked 
+            {
+             color: black;
+            }
+            .unchecked
+            {
+                color: gray;
+            }
+        </style>
+
+    </head>
+<body>
+
+<div>
+    <div>
+        <img src="C:\Users\MSI GL65\Desktop\download.png" alt="Denim Jacket">   
+        
+        <div>
+            <p style="font-size:160%;"> CLASSIC DENIM SHIRT</p>  
+            
+            <div>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star unchecked"></span>    
+                <span>23 reviews</span>
+            </div>
+            
+            <div>
+                <p>QUANTITY</p>
+                <input type=button value="-" onclick="button2()" />
+                <span id="output-area"></span>
+                <input type=button value="+" onclick="button1()" />
+            </div>
+            
+            <div>
+                <p>CHECK COD AVAILABILITY</p>
+                <input type="text"/>
+                <input type="button" value="CHECK" />
+            </div>
+
+            <div>
+                <input type="button" value="ADD TO CART" onclick="addToCart()"/>
+                <span id="price"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+var x = 1;
+var price = 25990.00;
+document.getElementById('output-area').innerHTML = x;
+
+function button1() {
+  document.getElementById('output-area').innerHTML = ++x;
+}
+
+function button2() {
+  document.getElementById('output-area').innerHTML = --x;
+}
+
+function addToCart()
+{
+    document.getElementById('price').innerHTML = x*price;
+    
+}
+</script>
+
+</body>
+</html>
